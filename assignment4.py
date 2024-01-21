@@ -142,13 +142,12 @@ def main():
                 sentence_to_visualize = sents[0]
                 predicted_trees = parse(grammar, sentence_to_visualize)
 
-            # Visualize parse trees using the `draw` method
+                # Visualize parse trees using the `draw` method
                 print(f"Visualizing parses for sentence at index {idx}: {sentence_to_visualize}")
                 for i, tree in enumerate(predicted_trees):
                     tree.draw()
                 break  # Stop after finding the first suitable sentence
        
-
     elif args.count:
         print("ID\t Predicted_Tree\tLabeled_Tree")
         for idx, sents in enumerate(t):
